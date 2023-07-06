@@ -18,8 +18,23 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     "Mofiqul/dracula.nvim",
     "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim"
+    "nvim-telescope/telescope.nvim",
+    "tpope/vim-fugitive",
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function ()
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({
+                ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html" },
+                sync_install = false,
+                highlight = { enable = true },
+                indent = { enable = true },
+            })
+        end
+    },
+    "nvim-treesitter/nvim-treesitter-context",
+    "folke/zen-mode.nvim",
+    "laytan/cloak.nvim",
 })
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
