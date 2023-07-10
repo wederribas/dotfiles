@@ -6,4 +6,6 @@
 [alias]
 	st = status
 	cm = commit
-	pso = push
+    pso = push
+    psfo = push --force
+    co = checkout
