@@ -8,4 +8,5 @@
 	cm = commit
     pso = push
     psfo = push --force
+    psuo = push origin --set-upstream
     co = checkout
