@@ -60,6 +60,11 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     "nvim-tree/nvim-web-devicons",
     "lukas-reineke/indent-blankline.nvim",
-    "lewis6991/gitsigns.nvim"
+    "lewis6991/gitsigns.nvim",
+
+    -- debugger
+    "mfussenegger/nvim-dap",
+    "rcarriga/nvim-dap-ui",
+    "nvim-telescope/telescope-dap.nvim",
 })
 
