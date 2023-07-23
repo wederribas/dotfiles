@@ -20,7 +20,10 @@ require("lazy").setup({
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
     "tpope/vim-fugitive",
-    "nvim-treesitter/nvim-treesitter",
+    {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+    },
     "nvim-treesitter/nvim-treesitter-context",
     "folke/zen-mode.nvim",
     "laytan/cloak.nvim",
@@ -66,5 +69,12 @@ require("lazy").setup({
     "mfussenegger/nvim-dap",
     "rcarriga/nvim-dap-ui",
     "nvim-telescope/telescope-dap.nvim",
+    "mxsdev/nvim-dap-vscode-js",
+    {
+        "microsoft/vscode-js-debug",
+        lazy = true,
+        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+    },
+    "theHamsta/nvim-dap-virtual-text",
 })
 
