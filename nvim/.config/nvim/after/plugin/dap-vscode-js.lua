@@ -6,8 +6,6 @@ require("dap-vscode-js").setup({
     'pwa-msedge',
     'node-terminal',
     'pwa-extensionHost',
-    'node',
-    'chrome'
   },
   -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
   -- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
