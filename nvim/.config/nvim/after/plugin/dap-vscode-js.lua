@@ -32,6 +32,22 @@ for _, language in ipairs(js_based_languages) do
           cwd = "${workspaceFolder}",
       },
       {
+          type = "pwa-node",
+          request = "attach",
+          name = "Attach to Remote Port",
+          protocol = "inspector",
+          host = "0.0.0.0",
+          port = 9229,
+          cwd = vim.fn.getcwd(),
+          localRoot = vim.fn.getcwd(),
+          remoteRoot = "/usr/local/bim360",
+          console = "integratedTerminal",
+          resolveSourceMapLocations = {
+              "${workspaceFolder}/**",
+              "!**/node_modules/**"
+          },
+      },
+      {
           type = "pwa-chrome",
           request = "launch",
           name = "Start Chrome with \"localhost\"",
