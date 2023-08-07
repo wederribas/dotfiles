@@ -2,6 +2,9 @@
 
 pushd $DOTFILES
 
+echo "Ensure default .zshrc and .zprofile are removed"
+rm ~/.zshrc ~/.zprofile
+
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     echo "stow $folder"
