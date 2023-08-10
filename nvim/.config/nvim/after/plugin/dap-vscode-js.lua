@@ -37,7 +37,7 @@ for _, language in ipairs(js_based_languages) do
           name = "Attach to Remote Port",
           protocol = "inspector",
           host = "0.0.0.0",
-          port = 9229,
+          port = os.getenv("NODEJS_DEBUGGER_PORT") or 9229,
           cwd = vim.fn.getcwd(),
           localRoot = vim.fn.getcwd(),
           remoteRoot = "/usr/local/bim360",
