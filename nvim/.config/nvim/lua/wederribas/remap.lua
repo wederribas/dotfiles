@@ -13,6 +13,9 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+vim.keymap.set("n", "<leader>c", '"*yiw') -- Copy word under cursor to clipboard
+vim.keymap.set("n", "<leader>C", '"*yy') -- Copy current row to clipboard
+
 -- DAP debugger
 vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
 vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over()<CR>")
