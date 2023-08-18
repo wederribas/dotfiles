@@ -40,6 +40,22 @@ for _, language in ipairs(js_based_languages) do
           port = os.getenv("NODEJS_DEBUGGER_PORT") or 9229,
           cwd = vim.fn.getcwd(),
           localRoot = vim.fn.getcwd(),
+          remoteRoot = "/usr/src/app",
+          console = "integratedTerminal",
+          resolveSourceMapLocations = {
+              "${workspaceFolder}/**",
+              "!**/node_modules/**"
+          },
+      },
+      {
+          type = "pwa-node",
+          request = "attach",
+          name = "Attach to Remote Port - ADSK",
+          protocol = "inspector",
+          host = "0.0.0.0",
+          port = os.getenv("NODEJS_DEBUGGER_PORT") or 9229,
+          cwd = vim.fn.getcwd(),
+          localRoot = vim.fn.getcwd(),
           remoteRoot = "/usr/local/bim360",
           console = "integratedTerminal",
           resolveSourceMapLocations = {
