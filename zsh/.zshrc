@@ -147,3 +147,4 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$HOME/Documents/Code/tmux-scripts/:$PATH
 bindkey -s ^f "tmux-sessionizer\n"
 
+export VAULT_USERNAME=$USERNAME
