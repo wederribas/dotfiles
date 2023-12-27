@@ -16,7 +16,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "Mofiqul/dracula.nvim",
+    {
+        "Mofiqul/dracula.nvim",
+        options = {
+            theme = 'dracula-vim'
+        }
+    },
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
     "tpope/vim-fugitive",
