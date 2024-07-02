@@ -148,3 +148,5 @@ export PATH=$HOME/Documents/Code/tmux-scripts/:$PATH
 bindkey -s ^f "tmux-sessionizer\n"
 
 export VAULT_USERNAME=$USERNAME
+
+export GPG_TTY=$(tty)
