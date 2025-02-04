@@ -132,8 +132,8 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Postgres 15
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+# Postgres 16
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
