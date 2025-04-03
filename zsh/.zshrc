@@ -153,3 +153,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 export VAULT_USERNAME=$USERNAME
 
 export GPG_TTY=$(tty)
+
+# PSQL
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
